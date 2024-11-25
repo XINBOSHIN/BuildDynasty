@@ -53,7 +53,7 @@ public class Determinizer {
                     if (!manifest.contains("builddynasty.launch.BuildDynastyTweaker")) {
                         throw new IllegalStateException("unable to replace");
                     }
-                    manifest = manifest.replace("builddynasty.launch.BaritoneTweaker", "org.spongepowered.asm.launch.MixinTweaker");
+                    manifest = manifest.replace("builddynasty.launch.builddynastyTweaker", "org.spongepowered.asm.launch.MixinTweaker");
                     jos.write(manifest.getBytes());
                 } else {
                     copy(jarFile.getInputStream(entry), jos);
