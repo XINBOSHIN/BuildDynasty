@@ -25,7 +25,7 @@ import java.util.ServiceLoader;
 /**
  * Exposes the {@link IBaritoneProvider} instance and the {@link Settings} instance for API usage.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/23/2018
  */
 public final class BaritoneAPI {
