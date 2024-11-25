@@ -37,8 +37,8 @@ buildscript {
     }
 }
 
-import baritone.gradle.task.CreateDistTask
-import baritone.gradle.task.ProguardTask
+import builddynasty.gradle.task.CreateDistTask
+import builddynasty.gradle.task.ProguardTask
 
 apply plugin: 'java'
 apply plugin: 'maven-publish'
