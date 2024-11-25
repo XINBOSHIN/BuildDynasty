@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/23/2018
  */
 public interface IFollowProcess extends IBaritoneProcess {
