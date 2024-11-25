@@ -52,7 +52,7 @@ public interface Helper {
         // Inner text component
         final Calendar now = Calendar.getInstance();
         final boolean xd = now.get(Calendar.MONTH) == Calendar.APRIL && now.get(Calendar.DAY_OF_MONTH) <= 3;
-        ITextComponent baritone = new TextComponentString(xd ? "Baritoe" : BaritoneAPI.getSettings().shortBaritonePrefix.value ? "B" : "Baritone");
+        ITextComponent baritone = new TextComponentString(xd ? "BuildDynasty" : BaritoneAPI.getSettings().shortBaritonePrefix.value ? "B" : "Baritone");
         baritone.getStyle().setColor(TextFormatting.LIGHT_PURPLE);
 
         // Outer brackets
