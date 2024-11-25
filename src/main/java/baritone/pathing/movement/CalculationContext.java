@@ -42,7 +42,7 @@ import java.util.List;
 import static baritone.api.pathing.movement.ActionCosts.COST_INF;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/7/2018
  */
 public class CalculationContext {
