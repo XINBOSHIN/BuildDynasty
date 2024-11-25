@@ -26,7 +26,7 @@ import net.minecraft.util.math.ChunkPos;
 import java.util.List;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/6/2018
  */
 public interface IWorldScanner {
