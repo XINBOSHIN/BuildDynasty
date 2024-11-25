@@ -37,7 +37,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/4/2018
  */
 public class WorldProvider implements IWorldProvider {
