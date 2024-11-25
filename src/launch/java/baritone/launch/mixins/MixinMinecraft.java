@@ -46,7 +46,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import java.util.function.BiFunction;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 @Mixin(Minecraft.class)
