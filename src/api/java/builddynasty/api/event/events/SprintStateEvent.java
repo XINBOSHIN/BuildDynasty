@@ -18,7 +18,7 @@
 package baritone.api.event.events;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 1/18/2019
  */
 public final class SprintStateEvent {
