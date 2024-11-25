@@ -21,7 +21,7 @@ import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.storage.IChunkLoader;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @see WorldProvider
  * @since 8/4/2018
  */
