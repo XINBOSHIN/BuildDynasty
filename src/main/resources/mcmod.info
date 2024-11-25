@@ -1,6 +1,6 @@
 [
 {
-  "modid": "builddynasty",
+  "modid": "build_dynasty",
   "name": "Build Dynasty",
   "description": "Example placeholder mod.",
   "version": "${version}",
