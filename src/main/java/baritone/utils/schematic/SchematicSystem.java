@@ -27,7 +27,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/24/2019
  */
 public enum SchematicSystem implements ISchematicSystem {

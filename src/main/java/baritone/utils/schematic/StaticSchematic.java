@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Default implementation of {@link IStaticSchematic}
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/23/2019
  */
 public class StaticSchematic extends AbstractSchematic implements IStaticSchematic {
