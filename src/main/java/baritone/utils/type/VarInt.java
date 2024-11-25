@@ -21,7 +21,7 @@ import it.unimi.dsi.fastutil.bytes.ByteArrayList;
 import it.unimi.dsi.fastutil.bytes.ByteList;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/19/2019
  */
 public final class VarInt {
