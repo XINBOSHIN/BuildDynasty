@@ -181,7 +181,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.launch, 'mixins.baritone.refmap.json'
+    add sourceSets.launch, 'mixins.builddynasty.refmap.json'
 }
 
 javadoc {
@@ -195,7 +195,7 @@ javadoc {
 jar {
     from sourceSets.launch.output, sourceSets.api.output
 
-    if (!getProject().hasProperty("baritone.forge_build")) {
+    if (!getProject().hasProperty("builddynasty.forge_build")) {
         exclude "**/BaritoneForgeModXD.class"
         exclude "**/mods.toml"
     }
