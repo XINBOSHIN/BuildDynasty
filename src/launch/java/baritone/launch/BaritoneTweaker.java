@@ -31,7 +31,7 @@ import java.util.List;
  * @author Brady
  * @since 7/31/2018
  */
-public class BaritoneTweaker extends SimpleTweaker {
+public class BuildDynastyTweaker extends SimpleTweaker {
 
     @Override
     public void injectIntoClassLoader(LaunchClassLoader classLoader) {
@@ -50,6 +50,6 @@ public class BaritoneTweaker extends SimpleTweaker {
         MixinEnvironment.getDefaultEnvironment().setSide(MixinEnvironment.Side.CLIENT);
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext(obfuscation);
 
-        Mixins.addConfiguration("mixins.baritone.json");
+        Mixins.addConfiguration("mixins.builddynasty.json");
     }
 }
