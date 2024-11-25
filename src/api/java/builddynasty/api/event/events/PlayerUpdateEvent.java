@@ -20,7 +20,7 @@ package baritone.api.event.events;
 import baritone.api.event.events.type.EventState;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/21/2018
  */
 public final class PlayerUpdateEvent {
