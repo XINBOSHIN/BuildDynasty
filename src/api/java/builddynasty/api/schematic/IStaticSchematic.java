@@ -23,7 +23,7 @@ import net.minecraft.block.state.IBlockState;
  * A static schematic is capable of providing the desired state at a given position without
  * additional context. Schematics of this type are expected to have non-varying contents.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @see #getDirect(int, int, int)
  * @since 12/24/2019
  */
