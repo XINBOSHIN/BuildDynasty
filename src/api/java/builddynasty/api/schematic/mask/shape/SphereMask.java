@@ -21,7 +21,7 @@ import baritone.api.schematic.mask.AbstractMask;
 import baritone.api.schematic.mask.StaticMask;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class SphereMask extends AbstractMask implements StaticMask {
 
