@@ -22,7 +22,7 @@ import baritone.api.Settings;
 import java.util.UUID;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/26/2019
  */
 public interface IBaritoneChatControl {
