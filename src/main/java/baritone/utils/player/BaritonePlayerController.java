@@ -36,7 +36,7 @@ import net.minecraft.world.World;
 /**
  * Implementation of {@link IPlayerController} that chains to the primary player controller's methods
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/14/2018
  */
 public final class BaritonePlayerController implements IPlayerController {
