@@ -31,7 +31,7 @@ import java.util.stream.Stream;
  * An ease-of-access interface to provide the {@link Minecraft} game instance,
  * chat and console logging mechanisms, and the Baritone chat prefix.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/1/2018
  */
 public interface Helper {
