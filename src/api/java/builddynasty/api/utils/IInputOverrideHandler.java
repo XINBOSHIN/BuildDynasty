@@ -21,7 +21,7 @@ import baritone.api.behavior.IBehavior;
 import baritone.api.utils.input.Input;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 11/12/2018
  */
 public interface IInputOverrideHandler extends IBehavior {
