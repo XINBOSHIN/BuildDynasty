@@ -36,7 +36,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/1/2018
  */
 @Mixin(EntityPlayerSP.class)
