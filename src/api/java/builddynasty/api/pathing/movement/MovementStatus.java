@@ -18,7 +18,7 @@
 package baritone.api.pathing.movement;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/8/2018
  */
 public enum MovementStatus {
