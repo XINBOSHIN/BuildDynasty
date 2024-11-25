@@ -107,12 +107,12 @@ ext.doHackyStuff = { final Class<?> clazz ->
         reobfNotchJar.doFirst {
             // https://github.com/MinecraftForge/ForgeGradle/blob/6639464b29b0923187eee0a609e546ba9f1b998b/src/userdev/java/net/minecraftforge/gradle/userdev/tasks/RenameJar.java#L96
             def extraMappings = reobfNotchJar.getExtraMappings()
-            println("[Baritoe] Extra mappings: ${extraMappings}")
+            println("[BuildDynasty] Extra mappings: ${extraMappings}")
             def copy = new ArrayList<>()
             extraMappings.forEach { extraMapping ->
                 copy.add(withExtension(extraMapping, 'notch.srg'))
             }
-            println("[Baritoe] New extra mappings: ${copy}")
+            println("[BuildDynasty] New extra mappings: ${copy}")
             reobfNotchJar.setExtraMappings(copy)
         }
     }
