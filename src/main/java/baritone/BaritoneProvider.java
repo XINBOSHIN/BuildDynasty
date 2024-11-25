@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/29/2018
  */
 public final class BaritoneProvider implements IBaritoneProvider {
