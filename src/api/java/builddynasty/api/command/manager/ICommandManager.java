@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/21/2019
  */
 public interface ICommandManager {
