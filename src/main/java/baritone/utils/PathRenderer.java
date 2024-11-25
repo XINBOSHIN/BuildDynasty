@@ -41,7 +41,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/9/2018
  */
 public final class PathRenderer implements IRenderer {
