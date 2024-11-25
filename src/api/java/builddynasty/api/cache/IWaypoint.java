@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * A marker for a position in the world.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/24/2018
  */
 public interface IWaypoint {

@@ -29,7 +29,7 @@ import baritone.api.utils.IInputOverrideHandler;
 import baritone.api.utils.IPlayerContext;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/29/2018
  */
 public interface IBaritone {
