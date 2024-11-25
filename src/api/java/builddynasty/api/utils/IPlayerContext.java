@@ -29,7 +29,7 @@ import net.minecraft.world.World;
 import java.util.Optional;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 11/12/2018
  */
 public interface IPlayerContext {
