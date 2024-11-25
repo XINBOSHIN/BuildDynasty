@@ -32,7 +32,7 @@ import static baritone.api.utils.Helper.HELPER;
  * <p>
  * Anything implementing this interface should be assignable to {@link Exception}.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/20/2019
  */
 public interface ICommandException {
