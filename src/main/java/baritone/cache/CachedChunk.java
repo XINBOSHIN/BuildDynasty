@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/3/2018
  */
 public final class CachedChunk {
