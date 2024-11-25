@@ -22,7 +22,7 @@ import net.minecraft.util.math.BlockPos;
 /**
  * Called when the local player interacts with a block, can be either {@link Type#START_BREAK} or {@link Type#USE}.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/22/2018
  */
 public final class BlockInteractEvent {
