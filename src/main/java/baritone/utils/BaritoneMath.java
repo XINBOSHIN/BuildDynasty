@@ -18,7 +18,7 @@
 package baritone.utils;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class BaritoneMath {
 
