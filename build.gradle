@@ -95,7 +95,7 @@ minecraft {
             args '--assetIndex', '{asset_index}'
             args '--accessToken', 'INVALID'
 
-            args '--tweakClass', 'baritone.launch.BaritoneTweaker'
+            args '--tweakClass', 'builddynasty.launch.builddynastyTweaker'
             jvmArgs "-Dorg.lwjgl.librarypath=${nativesOutput}"
         }
     }
