@@ -26,7 +26,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import java.io.File;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/4/2018
  */
 @Mixin(AnvilChunkLoader.class)
