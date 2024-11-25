@@ -21,7 +21,7 @@ import baritone.api.event.events.type.EventState;
 import net.minecraft.client.multiplayer.WorldClient;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/4/2018
  */
 public final class WorldEvent {
