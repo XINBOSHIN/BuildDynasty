@@ -24,7 +24,7 @@ import baritone.api.utils.BooleanBinaryOperator;
 import net.minecraft.block.state.IBlockState;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class BinaryOperatorMask extends AbstractMask {
 
