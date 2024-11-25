@@ -27,7 +27,7 @@ import java.util.stream.Stream;
 /**
  * The base for a command.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/7/2019
  */
 public interface ICommand extends Helper {
