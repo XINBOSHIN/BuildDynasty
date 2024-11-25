@@ -179,7 +179,7 @@ jar {
     from sourceSets.launch.output, sourceSets.api.output
 
     if (!getProject().hasProperty("builddynasty.forge_build")) {
-        exclude "**/BaritoneForgeModXD.class"
+        exclude "**/BuildDynastyForgeModXD.class"
         exclude "**/mods.toml"
     }
 
@@ -188,8 +188,13 @@ jar {
 
     manifest {
         attributes(
+<<<<<<< Updated upstream
                 'MixinConfigs': 'mixins.baritone.json',
                 'TweakClass': 'baritone.launch.BuildDynastyTweaker',
+=======
+                'MixinConfigs': 'mixins.BuildDynasty.json',
+                'TweakClass': 'BuildDynasty.launch.BuildDynastyTweaker',
+>>>>>>> Stashed changes
                 'Implementation-Title': 'BuildDynasty',
                 'Implementation-Version': version
         )

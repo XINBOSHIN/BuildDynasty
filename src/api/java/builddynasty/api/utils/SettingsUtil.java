@@ -1,24 +1,24 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.utils;
+package BuildDynasty.api.utils;
 
-import baritone.api.BaritoneAPI;
-import baritone.api.Settings;
+import BuildDynasty.api.BuildDynastyAPI;
+import BuildDynasty.api.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
@@ -85,9 +85,9 @@ public class SettingsUtil {
                 }
             });
         } catch (NoSuchFileException ignored) {
-            Helper.HELPER.logDirect("Baritone settings file not found, resetting.");
+            Helper.HELPER.logDirect("BuildDynasty settings file not found, resetting.");
         } catch (Exception ex) {
-            Helper.HELPER.logDirect("Exception while reading Baritone settings, some settings may be reset to default values!");
+            Helper.HELPER.logDirect("Exception while reading BuildDynasty settings, some settings may be reset to default values!");
             ex.printStackTrace();
         }
     }
@@ -98,13 +98,13 @@ public class SettingsUtil {
                 out.write(settingToString(setting) + "\n");
             }
         } catch (Exception ex) {
-            Helper.HELPER.logDirect("Exception thrown while saving Baritone settings!");
+            Helper.HELPER.logDirect("Exception thrown while saving BuildDynasty settings!");
             ex.printStackTrace();
         }
     }
 
     private static Path settingsByName(String name) {
-        return Minecraft.getMinecraft().gameDir.toPath().resolve("baritone").resolve(name);
+        return Minecraft.getMinecraft().gameDir.toPath().resolve("BuildDynasty").resolve(name);
     }
 
     public static List<Settings.Setting> modifiedSettings(Settings settings) {
@@ -160,7 +160,7 @@ public class SettingsUtil {
     }
 
     public static String maybeCensor(int coord) {
-        if (BaritoneAPI.getSettings().censorCoordinates.value) {
+        if (BuildDynastyAPI.getSettings().censorCoordinates.value) {
             return "<censored>";
         }
 

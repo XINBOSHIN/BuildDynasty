@@ -1,6 +1,6 @@
 package builddynasty.api.cache;
 
-import baritone.api.utils.BetterBlockPos;
+import BuildDynasty.api.utils.BetterBlockPos;
 
 import java.util.*;
 

@@ -1,23 +1,23 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.utils;
+package BuildDynasty.api.utils;
 
-import baritone.api.BaritoneAPI;
+import BuildDynasty.api.BuildDynastyAPI;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 
 /**
  * An ease-of-access interface to provide the {@link Minecraft} game instance,
- * chat and console logging mechanisms, and the Baritone chat prefix.
+ * chat and console logging mechanisms, and the BuildDynasty chat prefix.
  *
  * @author XINBOSHIN
  * @since 8/1/2018
@@ -52,14 +52,14 @@ public interface Helper {
         // Inner text component
         final Calendar now = Calendar.getInstance();
         final boolean xd = now.get(Calendar.MONTH) == Calendar.APRIL && now.get(Calendar.DAY_OF_MONTH) <= 3;
-        ITextComponent baritone = new TextComponentString(xd ? "BuildDynasty" : BaritoneAPI.getSettings().shortBaritonePrefix.value ? "B" : "Baritone");
-        baritone.getStyle().setColor(TextFormatting.LIGHT_PURPLE);
+        ITextComponent BuildDynasty = new TextComponentString(xd ? "BuildDynasty" : BuildDynastyAPI.getSettings().shortBuildDynastyPrefix.value ? "B" : "BuildDynasty");
+        BuildDynasty.getStyle().setColor(TextFormatting.LIGHT_PURPLE);
 
         // Outer brackets
         ITextComponent prefix = new TextComponentString("");
         prefix.getStyle().setColor(TextFormatting.DARK_PURPLE);
         prefix.appendText("[");
-        prefix.appendSibling(baritone);
+        prefix.appendSibling(BuildDynasty);
         prefix.appendText("]");
 
         return prefix;
@@ -72,7 +72,7 @@ public interface Helper {
      * @param message The message to display in the popup
      */
     default void logToast(ITextComponent title, ITextComponent message) {
-        Minecraft.getMinecraft().addScheduledTask(() -> BaritoneAPI.getSettings().toaster.value.accept(title, message));
+        Minecraft.getMinecraft().addScheduledTask(() -> BuildDynastyAPI.getSettings().toaster.value.accept(title, message));
     }
 
     /**
@@ -110,7 +110,7 @@ public interface Helper {
      * @param error   Whether to log as an error
      */
     default void logNotification(String message, boolean error) {
-        if (BaritoneAPI.getSettings().desktopNotifications.value) {
+        if (BuildDynastyAPI.getSettings().desktopNotifications.value) {
             logNotificationDirect(message, error);
         }
     }
@@ -133,7 +133,7 @@ public interface Helper {
      * @param error   Whether to log as an error
      */
     default void logNotificationDirect(String message, boolean error) {
-        Minecraft.getMinecraft().addScheduledTask(() -> BaritoneAPI.getSettings().notifier.value.accept(message, error));
+        Minecraft.getMinecraft().addScheduledTask(() -> BuildDynastyAPI.getSettings().notifier.value.accept(message, error));
     }
 
     /**
@@ -142,7 +142,7 @@ public interface Helper {
      * @param message The message to display in chat
      */
     default void logDebug(String message) {
-        if (!BaritoneAPI.getSettings().chatDebug.value) {
+        if (!BuildDynastyAPI.getSettings().chatDebug.value) {
             //System.out.println("Suppressed debug message:");
             //System.out.println(message);
             return;
@@ -153,7 +153,7 @@ public interface Helper {
     }
 
     /**
-     * Send components to chat with the [Baritone] prefix
+     * Send components to chat with the [BuildDynasty] prefix
      *
      * @param logAsToast Whether to log as a toast notification
      * @param components The components to send
@@ -170,17 +170,17 @@ public interface Helper {
         if (logAsToast) {
             logToast(getPrefix(), component);
         } else {
-            Minecraft.getMinecraft().addScheduledTask(() -> BaritoneAPI.getSettings().logger.value.accept(component));
+            Minecraft.getMinecraft().addScheduledTask(() -> BuildDynastyAPI.getSettings().logger.value.accept(component));
         }
     }
 
     /**
-     * Send components to chat with the [Baritone] prefix
+     * Send components to chat with the [BuildDynasty] prefix
      *
      * @param components The components to send
      */
     default void logDirect(ITextComponent... components) {
-        logDirect(BaritoneAPI.getSettings().logAsToast.value, components);
+        logDirect(BuildDynastyAPI.getSettings().logAsToast.value, components);
     }
 
     /**
@@ -207,7 +207,7 @@ public interface Helper {
      * @param color   The color to print that message in
      */
     default void logDirect(String message, TextFormatting color) {
-        logDirect(message, color, BaritoneAPI.getSettings().logAsToast.value);
+        logDirect(message, color, BuildDynastyAPI.getSettings().logAsToast.value);
     }
 
     /**
@@ -228,12 +228,12 @@ public interface Helper {
      * @param message The message to display in chat
      */
     default void logDirect(String message) {
-        logDirect(message, BaritoneAPI.getSettings().logAsToast.value);
+        logDirect(message, BuildDynastyAPI.getSettings().logAsToast.value);
     }
 
     default void logUnhandledException(final Throwable exception) {
         HELPER.logDirect("An unhandled exception occurred. " +
-                        "The error is in your game's log, please report this at https://github.com/cabaletta/baritone/issues",
+                        "The error is in your game's log, please report this at https://github.com/cabaletta/BuildDynasty/issues",
                 TextFormatting.RED);
         exception.printStackTrace();
     }

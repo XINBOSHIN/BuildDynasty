@@ -1,24 +1,24 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.pathing.calc;
+package BuildDynasty.api.pathing.calc;
 
-import baritone.api.process.IBaritoneProcess;
-import baritone.api.process.PathingCommand;
+import BuildDynasty.api.process.IBuildDynastyProcess;
+import BuildDynasty.api.process.PathingCommand;
 
 import java.util.Optional;
 
@@ -28,17 +28,17 @@ import java.util.Optional;
 public interface IPathingControlManager {
 
     /**
-     * Registers a process with this pathing control manager. See {@link IBaritoneProcess} for more details.
+     * Registers a process with this pathing control manager. See {@link IBuildDynastyProcess} for more details.
      *
      * @param process The process
-     * @see IBaritoneProcess
+     * @see IBuildDynastyProcess
      */
-    void registerProcess(IBaritoneProcess process);
+    void registerProcess(IBuildDynastyProcess process);
 
     /**
-     * @return The most recent {@link IBaritoneProcess} that had control
+     * @return The most recent {@link IBuildDynastyProcess} that had control
      */
-    Optional<IBaritoneProcess> mostRecentInControl();
+    Optional<IBuildDynastyProcess> mostRecentInControl();
 
     /**
      * @return The most recent pathing command executed

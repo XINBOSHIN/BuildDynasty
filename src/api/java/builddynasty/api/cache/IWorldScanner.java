@@ -1,24 +1,24 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.cache;
+package BuildDynasty.api.cache;
 
-import baritone.api.utils.BlockOptionalMetaLookup;
-import baritone.api.utils.IPlayerContext;
+import BuildDynasty.api.utils.BlockOptionalMetaLookup;
+import BuildDynasty.api.utils.IPlayerContext;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;

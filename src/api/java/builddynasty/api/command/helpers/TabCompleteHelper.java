@@ -1,28 +1,28 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.command.helpers;
+package BuildDynasty.api.command.helpers;
 
-import baritone.api.BaritoneAPI;
-import baritone.api.Settings;
-import baritone.api.command.argument.IArgConsumer;
-import baritone.api.command.manager.ICommandManager;
-import baritone.api.event.events.TabCompleteEvent;
-import baritone.api.utils.SettingsUtil;
+import BuildDynasty.api.BuildDynastyAPI;
+import BuildDynasty.api.Settings;
+import BuildDynasty.api.command.argument.IArgConsumer;
+import BuildDynasty.api.command.manager.ICommandManager;
+import BuildDynasty.api.event.events.TabCompleteEvent;
+import BuildDynasty.api.utils.SettingsUtil;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.Comparator;
@@ -252,7 +252,7 @@ public class TabCompleteHelper {
      */
     public TabCompleteHelper addSettings() {
         return append(
-                BaritoneAPI.getSettings().allSettings.stream()
+                BuildDynastyAPI.getSettings().allSettings.stream()
                         .filter(s -> !s.isJavaOnly())
                         .map(Settings.Setting::getName)
                         .sorted(String.CASE_INSENSITIVE_ORDER)
@@ -266,7 +266,7 @@ public class TabCompleteHelper {
      */
     public TabCompleteHelper addModifiedSettings() {
         return append(
-                SettingsUtil.modifiedSettings(BaritoneAPI.getSettings()).stream()
+                SettingsUtil.modifiedSettings(BuildDynastyAPI.getSettings()).stream()
                         .map(Settings.Setting::getName)
                         .sorted(String.CASE_INSENSITIVE_ORDER)
         );
@@ -279,7 +279,7 @@ public class TabCompleteHelper {
      */
     public TabCompleteHelper addToggleableSettings() {
         return append(
-                BaritoneAPI.getSettings().getAllValuesByType(Boolean.class).stream()
+                BuildDynastyAPI.getSettings().getAllValuesByType(Boolean.class).stream()
                         .map(Settings.Setting::getName)
                         .sorted(String.CASE_INSENSITIVE_ORDER)
         );

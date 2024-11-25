@@ -1,26 +1,26 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api;
+package BuildDynasty.api;
 
-import baritone.api.utils.NotificationHelper;
-import baritone.api.utils.SettingsUtil;
-import baritone.api.utils.TypeUtils;
-import baritone.api.utils.gui.BaritoneToast;
+import BuildDynasty.api.utils.NotificationHelper;
+import BuildDynasty.api.utils.SettingsUtil;
+import BuildDynasty.api.utils.TypeUtils;
+import BuildDynasty.api.utils.gui.BuildDynastyToast;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
@@ -43,34 +43,34 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /**
- * Baritone's settings. Settings apply to all Baritone instances.
+ * BuildDynasty's settings. Settings apply to all BuildDynasty instances.
  *
  * @author leijurv
  */
 public final class Settings {
 
     /**
-     * Allow Baritone to break blocks
+     * Allow BuildDynasty to break blocks
      */
     public final Setting<Boolean> allowBreak = new Setting<>(true);
 
     /**
-     * Blocks that baritone will be allowed to break even with allowBreak set to false
+     * Blocks that BuildDynasty will be allowed to break even with allowBreak set to false
      */
     public final Setting<List<Block>> allowBreakAnyway = new Setting<>(new ArrayList<>());
 
     /**
-     * Allow Baritone to sprint
+     * Allow BuildDynasty to sprint
      */
     public final Setting<Boolean> allowSprint = new Setting<>(true);
 
     /**
-     * Allow Baritone to place blocks
+     * Allow BuildDynasty to place blocks
      */
     public final Setting<Boolean> allowPlace = new Setting<>(true);
 
     /**
-     * Allow Baritone to move items in your inventory to your hotbar
+     * Allow BuildDynasty to move items in your inventory to your hotbar
      */
     public final Setting<Boolean> allowInventory = new Setting<>(false);
 
@@ -85,10 +85,10 @@ public final class Settings {
     public final Setting<Boolean> inventoryMoveOnlyIfStationary = new Setting<>(false);
 
     /**
-     * Disable baritone's auto-tool at runtime, but still assume that another mod will provide auto tool functionality
+     * Disable BuildDynasty's auto-tool at runtime, but still assume that another mod will provide auto tool functionality
      * <p>
      * Specifically, path calculation will still assume that an auto tool will run at execution time, even though
-     * Baritone itself will not do that.
+     * BuildDynasty itself will not do that.
      */
     public final Setting<Boolean> assumeExternalAutoTool = new Setting<>(false);
 
@@ -101,7 +101,7 @@ public final class Settings {
      * It doesn't actually take twenty ticks to place a block, this cost is so high
      * because we want to generally conserve blocks which might be limited.
      * <p>
-     * Decrease to make Baritone more often consider paths that would require placing blocks
+     * Decrease to make BuildDynasty more often consider paths that would require placing blocks
      */
     public final Setting<Double> blockPlacementPenalty = new Setting<>(20D);
 
@@ -130,14 +130,14 @@ public final class Settings {
     public final Setting<Boolean> strictLiquidCheck = new Setting<>(false);
 
     /**
-     * Allow Baritone to fall arbitrary distances and place a water bucket beneath it.
+     * Allow BuildDynasty to fall arbitrary distances and place a water bucket beneath it.
      * Reliability: questionable.
      */
     public final Setting<Boolean> allowWaterBucketFall = new Setting<>(true);
 
     /**
-     * Allow Baritone to assume it can walk on still water just like any other block.
-     * This functionality is assumed to be provided by a separate library that might have imported Baritone.
+     * Allow BuildDynasty to assume it can walk on still water just like any other block.
+     * This functionality is assumed to be provided by a separate library that might have imported BuildDynasty.
      * <p>
      * Note: This will prevent some usage of the frostwalker enchantment, like pillaring up from water.
      */
@@ -200,7 +200,7 @@ public final class Settings {
     public final Setting<Boolean> allowDownward = new Setting<>(true);
 
     /**
-     * Blocks that Baritone is allowed to place (as throwaway, for sneak bridging, pillaring, etc.)
+     * Blocks that BuildDynasty is allowed to place (as throwaway, for sneak bridging, pillaring, etc.)
      */
     public final Setting<List<Item>> acceptableThrowawayItems = new Setting<>(new ArrayList<>(Arrays.asList(
             Item.getItemFromBlock(Blocks.DIRT),
@@ -210,21 +210,21 @@ public final class Settings {
     )));
 
     /**
-     * Blocks that Baritone will attempt to avoid (Used in avoidance)
+     * Blocks that BuildDynasty will attempt to avoid (Used in avoidance)
      */
     public final Setting<List<Block>> blocksToAvoid = new Setting<>(new ArrayList<>(
             // Leave Empty by Default
     ));
 
     /**
-     * Blocks that Baritone is not allowed to break
+     * Blocks that BuildDynasty is not allowed to break
      */
     public final Setting<List<Block>> blocksToDisallowBreaking = new Setting<>(new ArrayList<>(
             // Leave Empty by Default
     ));
 
     /**
-     * blocks that baritone shouldn't break, but can if it needs to.
+     * blocks that BuildDynasty shouldn't break, but can if it needs to.
      */
     public final Setting<List<Block>> blocksToAvoidBreaking = new Setting<>(new ArrayList<>(Arrays.asList( // TODO can this be a HashSet or ImmutableSet?
             Blocks.CRAFTING_TABLE,
@@ -264,14 +264,14 @@ public final class Settings {
      * <p>
      * If a schematic asks for a block on this mapping, all blocks on the mapped list will be accepted at that location as well
      * <p>
-     * Syntax same as <a href="https://baritone.leijurv.com/baritone/api/Settings.html#buildSubstitutes">buildSubstitutes</a>
+     * Syntax same as <a href="https://BuildDynasty.leijurv.com/BuildDynasty/api/Settings.html#buildSubstitutes">buildSubstitutes</a>
      */
     public final Setting<Map<Block, List<Block>>> buildValidSubstitutes = new Setting<>(new HashMap<>());
 
     /**
      * A mapping of blocks to blocks to be built instead
      * <p>
-     * If a schematic asks for a block on this mapping, Baritone will place the first placeable block in the mapped list
+     * If a schematic asks for a block on this mapping, BuildDynasty will place the first placeable block in the mapped list
      * <p>
      * Usage Syntax:
      * <pre>
@@ -310,7 +310,7 @@ public final class Settings {
     )));
 
     /**
-     * If this setting is true, Baritone will never break a block that is adjacent to an unsupported falling block.
+     * If this setting is true, BuildDynasty will never break a block that is adjacent to an unsupported falling block.
      * <p>
      * I.E. it will never trigger cascading sand / gravel falls
      */
@@ -318,7 +318,7 @@ public final class Settings {
 
     /**
      * Enables some more advanced vine features. They're honestly just gimmicks and won't ever be needed in real
-     * pathing scenarios. And they can cause Baritone to get trapped indefinitely in a strange scenario.
+     * pathing scenarios. And they can cause BuildDynasty to get trapped indefinitely in a strange scenario.
      * <p>
      * Almost never turn this on lol
      */
@@ -410,7 +410,7 @@ public final class Settings {
     /**
      * Set to 1.0 to effectively disable this feature
      *
-     * @see <a href="https://github.com/cabaletta/baritone/issues/18">Issue #18</a>
+     * @see <a href="https://github.com/cabaletta/BuildDynasty/issues/18">Issue #18</a>
      */
     public final Setting<Double> backtrackCostFavoringCoefficient = new Setting<>(0.5);
 
@@ -472,7 +472,7 @@ public final class Settings {
      * <p>
      * This is much safer to leave off now, and makes pathing more efficient. More explanation in the issue.
      *
-     * @see <a href="https://github.com/cabaletta/baritone/issues/114">Issue #114</a>
+     * @see <a href="https://github.com/cabaletta/BuildDynasty/issues/114">Issue #114</a>
      */
     public final Setting<Boolean> cutoffAtLoadBoundary = new Setting<>(false);
 
@@ -598,12 +598,12 @@ public final class Settings {
 
 
     /**
-     * allows baritone to save bed waypoints when interacting with beds
+     * allows BuildDynasty to save bed waypoints when interacting with beds
      */
     public final Setting<Boolean> doBedWaypoints = new Setting<>(true);
 
     /**
-     * allows baritone to save death waypoints
+     * allows BuildDynasty to save death waypoints
      */
     public final Setting<Boolean> doDeathWaypoints = new Setting<>(true);
 
@@ -619,7 +619,7 @@ public final class Settings {
      * <p>
      * Temporarily reenabled
      *
-     * @see <a href="https://github.com/cabaletta/baritone/issues/248">Issue #248</a>
+     * @see <a href="https://github.com/cabaletta/BuildDynasty/issues/248">Issue #248</a>
      */
     public final Setting<Boolean> pruneRegionsFromRAM = new Setting<>(true);
 
@@ -653,7 +653,7 @@ public final class Settings {
     public final Setting<Boolean> chatDebug = new Setting<>(false);
 
     /**
-     * Allow chat based control of Baritone. Most likely should be disabled when Baritone is imported for use in
+     * Allow chat based control of BuildDynasty. Most likely should be disabled when BuildDynasty is imported for use in
      * something else
      */
     public final Setting<Boolean> chatControl = new Setting<>(true);
@@ -763,7 +763,7 @@ public final class Settings {
     public final Setting<Boolean> remainWithExistingLookDirection = new Setting<>(true);
 
     /**
-     * Will cause some minor behavioral differences to ensure that Baritone works on anticheats.
+     * Will cause some minor behavioral differences to ensure that BuildDynasty works on anticheats.
      * <p>
      * At the moment this will silently set the player's rotations when using freeLook so you're not sprinting in
      * directions other than forward, which is picken up by more "advanced" anticheats like AAC, but not NCP.
@@ -791,7 +791,7 @@ public final class Settings {
     public final Setting<Boolean> blacklistClosestOnFailure = new Setting<>(true);
 
     /**
-     * 😎 Render cached chunks as semitransparent. Doesn't work with OptiFine 😭 Rarely randomly crashes, see <a href="https://github.com/cabaletta/baritone/issues/327">this issue</a>.
+     * 😎 Render cached chunks as semitransparent. Doesn't work with OptiFine 😭 Rarely randomly crashes, see <a href="https://github.com/cabaletta/BuildDynasty/issues/327">this issue</a>.
      * <p>
      * Can be very useful on servers with low render distance. After enabling, you may need to reload the world in order for it to have an effect
      * (e.g. disconnect and reconnect, enter then exit the nether, die and respawn, etc). This may literally kill your FPS and CPU because
@@ -810,7 +810,7 @@ public final class Settings {
     public final Setting<Float> cachedChunksOpacity = new Setting<>(0.5f);
 
     /**
-     * Whether or not to allow you to run Baritone commands with the prefix
+     * Whether or not to allow you to run BuildDynasty commands with the prefix
      */
     public final Setting<Boolean> prefixControl = new Setting<>(true);
 
@@ -820,9 +820,9 @@ public final class Settings {
     public final Setting<String> prefix = new Setting<>("#");
 
     /**
-     * Use a short Baritone prefix [B] instead of [Baritone] when logging to chat
+     * Use a short BuildDynasty prefix [B] instead of [BuildDynasty] when logging to chat
      */
-    public final Setting<Boolean> shortBaritonePrefix = new Setting<>(false);
+    public final Setting<Boolean> shortBuildDynastyPrefix = new Setting<>(false);
 
     /**
      * Echo commands to chat when they are run
@@ -902,7 +902,7 @@ public final class Settings {
     public final Setting<Integer> maxYLevelWhileMining = new Setting<>(255); // 1.17+ defaults to maximum possible world height
 
     /**
-     * This will only allow baritone to mine exposed ores, can be used to stop ore obfuscators on servers that use them.
+     * This will only allow BuildDynasty to mine exposed ores, can be used to stop ore obfuscators on servers that use them.
      */
     public final Setting<Boolean> allowOnlyExposedOres = new Setting<>(false);
 
@@ -1019,7 +1019,7 @@ public final class Settings {
     public final Setting<Boolean> goalBreakFromAbove = new Setting<>(false);
 
     /**
-     * Build in map art mode, which makes baritone only care about the top block in each column
+     * Build in map art mode, which makes BuildDynasty only care about the top block in each column
      */
     public final Setting<Boolean> mapArtMode = new Setting<>(false);
 
@@ -1088,7 +1088,7 @@ public final class Settings {
      * <p>
      * Currently only runs when either MineBehavior or FollowBehavior is active.
      * <p>
-     * For example, if Baritone is doing "mine iron_ore", the instant it breaks the ore (and it becomes air), that location
+     * For example, if BuildDynasty is doing "mine iron_ore", the instant it breaks the ore (and it becomes air), that location
      * is no longer a goal. This means that if this setting is true, it will stop there. If this setting were off, it would
      * continue with its path, and walk into that location. The tradeoff is if this setting is true, it mines ores much faster
      * since it doesn't waste any time getting into locations that no longer contain ores, but on the other hand, it misses
@@ -1179,13 +1179,13 @@ public final class Settings {
      * The only valid reason I can think of enable this setting is if you are extremely low on disk space and you play on multiplayer,
      * and can't take (average) 300kb saved for every 512x512 area. (note that more complicated terrain is less compressible and will take more space)
      * <p>
-     * However, simply discarding old chunks because they are old is inadvisable. Baritone is extremely good at correcting
+     * However, simply discarding old chunks because they are old is inadvisable. BuildDynasty is extremely good at correcting
      * itself and its paths as it learns new information, as new chunks load. There is no scenario in which having an
-     * incorrect cache can cause Baritone to get stuck, take damage, or perform any action it wouldn't otherwise, everything
+     * incorrect cache can cause BuildDynasty to get stuck, take damage, or perform any action it wouldn't otherwise, everything
      * is rechecked once the real chunk is in range.
      * <p>
      * Having a robust cache greatly improves long distance pathfinding, as it's able to go around large scale obstacles
-     * before they're in render distance. In fact, when the chunkCaching setting is disabled and Baritone starts anew
+     * before they're in render distance. In fact, when the chunkCaching setting is disabled and BuildDynasty starts anew
      * every time, or when you enter a completely new and very complicated area, it backtracks far more often because it
      * has to build up that cache from scratch. But after it's gone through an area just once, the next time will have zero
      * backtracking, since the entire area is now known and cached.
@@ -1193,7 +1193,7 @@ public final class Settings {
     public final Setting<Long> cachedChunksExpirySeconds = new Setting<>(-1L);
 
     /**
-     * The function that is called when Baritone will log to chat. This function can be added to
+     * The function that is called when BuildDynasty will log to chat. This function can be added to
      * via {@link Consumer#andThen(Consumer)} or it can completely be overriden via setting
      * {@link Setting#value};
      */
@@ -1201,7 +1201,7 @@ public final class Settings {
     public final Setting<Consumer<ITextComponent>> logger = new Setting<>(msg -> Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(msg));
 
     /**
-     * The function that is called when Baritone will send a desktop notification. This function can be added to
+     * The function that is called when BuildDynasty will send a desktop notification. This function can be added to
      * via {@link Consumer#andThen(Consumer)} or it can completely be overriden via setting
      * {@link Setting#value};
      */
@@ -1209,12 +1209,12 @@ public final class Settings {
     public final Setting<BiConsumer<String, Boolean>> notifier = new Setting<>(NotificationHelper::notify);
 
     /**
-     * The function that is called when Baritone will show a toast. This function can be added to
+     * The function that is called when BuildDynasty will show a toast. This function can be added to
      * via {@link Consumer#andThen(Consumer)} or it can completely be overriden via setting
      * {@link Setting#value};
      */
     @JavaOnly
-    public final Setting<BiConsumer<ITextComponent, ITextComponent>> toaster = new Setting<>(BaritoneToast::addOrUpdate);
+    public final Setting<BiConsumer<ITextComponent, ITextComponent>> toaster = new Setting<>(BuildDynastyToast::addOrUpdate);
 
     /**
      * The size of the box that is rendered when the current goal is a GoalYLevel

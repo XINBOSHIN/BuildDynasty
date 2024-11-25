@@ -1,24 +1,24 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.utils;
+package BuildDynasty.api.utils;
 
-import baritone.api.BaritoneAPI;
-import baritone.api.IBaritone;
+import BuildDynasty.api.BuildDynastyAPI;
+import BuildDynasty.api.IBuildDynasty;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -168,7 +168,7 @@ public final class RotationUtils {
     }
 
     public static Optional<Rotation> reachable(IPlayerContext ctx, BlockPos pos, double blockReachDistance, boolean wouldSneak) {
-        if (BaritoneAPI.getSettings().remainWithExistingLookDirection.value && ctx.isLookingAt(pos)) {
+        if (BuildDynastyAPI.getSettings().remainWithExistingLookDirection.value && ctx.isLookingAt(pos)) {
             /*
              * why add 0.0001?
              * to indicate that we actually have a desired pitch
@@ -224,7 +224,7 @@ public final class RotationUtils {
     public static Optional<Rotation> reachableOffset(IPlayerContext ctx, BlockPos pos, Vec3d offsetPos, double blockReachDistance, boolean wouldSneak) {
         Vec3d eyes = wouldSneak ? RayTraceUtils.inferSneakingEyePosition(ctx.player()) : ctx.player().getPositionEyes(1.0F);
         Rotation rotation = calcRotationFromVec3d(eyes, offsetPos, ctx.playerRotations());
-        Rotation actualRotation = BaritoneAPI.getProvider().getBaritoneForPlayer(ctx.player()).getLookBehavior().getAimProcessor().peekRotation(rotation);
+        Rotation actualRotation = BuildDynastyAPI.getProvider().getBuildDynastyForPlayer(ctx.player()).getLookBehavior().getAimProcessor().peekRotation(rotation);
         RayTraceResult result = RayTraceUtils.rayTraceTowards(ctx.player(), actualRotation, blockReachDistance, wouldSneak);
         //System.out.println(result);
         if (result != null && result.typeOfHit == RayTraceResult.Type.BLOCK) {
@@ -258,8 +258,8 @@ public final class RotationUtils {
 
     @Deprecated
     public static Optional<Rotation> reachable(EntityPlayerSP entity, BlockPos pos, double blockReachDistance, boolean wouldSneak) {
-        IBaritone baritone = BaritoneAPI.getProvider().getBaritoneForPlayer(entity);
-        IPlayerContext ctx = baritone.getPlayerContext();
+        IBuildDynasty BuildDynasty = BuildDynastyAPI.getProvider().getBuildDynastyForPlayer(entity);
+        IPlayerContext ctx = BuildDynasty.getPlayerContext();
         return reachable(ctx, pos, blockReachDistance, wouldSneak);
     }
 

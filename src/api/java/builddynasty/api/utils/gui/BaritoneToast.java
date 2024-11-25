@@ -1,21 +1,21 @@
 /*
- * This file is part of Baritone.
+ * This file is part of BuildDynasty.
  *
- * Baritone is free software: you can redistribute it and/or modify
+ * BuildDynasty is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Baritone is distributed in the hope that it will be useful,
+ * BuildDynasty is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with BuildDynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.api.utils.gui;
+package BuildDynasty.api.utils.gui;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.toasts.GuiToast;
@@ -24,14 +24,14 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class BaritoneToast implements IToast {
+public class BuildDynastyToast implements IToast {
     private String title;
     private String subtitle;
     private long firstDrawTime;
     private boolean newDisplay;
     private long totalShowTime;
 
-    public BaritoneToast(ITextComponent titleComponent, ITextComponent subtitleComponent, long totalShowTime) {
+    public BuildDynastyToast(ITextComponent titleComponent, ITextComponent subtitleComponent, long totalShowTime) {
         this.title = titleComponent.getFormattedText();
         this.subtitle = subtitleComponent == null ? null : subtitleComponent.getFormattedText();
         this.totalShowTime = totalShowTime;
@@ -64,16 +64,16 @@ public class BaritoneToast implements IToast {
     }
 
     public static void addOrUpdate(GuiToast toast, ITextComponent title, ITextComponent subtitle, long totalShowTime) {
-        BaritoneToast baritonetoast = toast.getToast(BaritoneToast.class, new Object());
+        BuildDynastyToast BuildDynastytoast = toast.getToast(BuildDynastyToast.class, new Object());
 
-        if (baritonetoast == null) {
-            toast.add(new BaritoneToast(title, subtitle, totalShowTime));
+        if (BuildDynastytoast == null) {
+            toast.add(new BuildDynastyToast(title, subtitle, totalShowTime));
         } else {
-            baritonetoast.setDisplayedText(title, subtitle);
+            BuildDynastytoast.setDisplayedText(title, subtitle);
         }
     }
 
     public static void addOrUpdate(ITextComponent title, ITextComponent subtitle) {
-        addOrUpdate(Minecraft.getMinecraft().getToastGui(), title, subtitle, baritone.api.BaritoneAPI.getSettings().toastTimer.value);
+        addOrUpdate(Minecraft.getMinecraft().getToastGui(), title, subtitle, BuildDynasty.api.BuildDynastyAPI.getSettings().toastTimer.value);
     }
 }
