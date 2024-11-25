@@ -18,7 +18,7 @@
 package baritone.api.utils;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public enum BooleanBinaryOperators implements BooleanBinaryOperator {
     OR((a, b) -> a || b),
