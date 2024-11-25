@@ -21,7 +21,7 @@ import baritone.api.utils.BetterBlockPos;
 import net.minecraft.util.math.BlockPos;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/8/2018
  */
 public interface IMovement {
