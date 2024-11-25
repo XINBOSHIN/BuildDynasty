@@ -18,7 +18,7 @@
 package baritone.api.utils;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 @FunctionalInterface
 public interface BooleanBinaryOperator {
