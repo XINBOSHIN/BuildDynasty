@@ -30,7 +30,7 @@ import net.minecraft.world.biome.Biome;
 import javax.annotation.Nullable;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 11/5/2019
  */
 @SuppressWarnings("NullableProblems")
