@@ -26,7 +26,7 @@ import net.minecraft.block.state.IBlockState;
  * A mask that is context-free. In other words, it doesn't require the current block state to determine if a relative
  * position is a part of the mask.
  *
- * @author Brady
+ * @author XINBOSHIN
  */
 public interface StaticMask extends Mask {
 
