@@ -28,7 +28,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.network.Packet;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 public interface IGameEventListener {
