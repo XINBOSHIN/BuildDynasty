@@ -21,7 +21,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 4/20/2019
  */
 public final class TypeUtils {
