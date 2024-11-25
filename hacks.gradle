@@ -1,20 +1,3 @@
-/*
- * This file is part of builddynasty.
- *
- * builddynasty is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation,
- either version 3 of the License, or
- * (at your option) any later version.
- *
- * builddynasty is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with builddynasty.  If not, see <https://www.gnu.org/licenses/>.
- */
 
 ext.doHackyStuff = { final Class<?> clazz ->
     def withExtension = { final File file, final String extension ->
@@ -23,9 +6,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
         return new File(file.getParent(), "$name.$extension")
     }
 
-    // https://github.com/MinecraftForge/ForgeGradle/blob/6639464b29b0923187eee0a609e546ba9f1b998b/src/patcher/java/net/minecraftforge/gradle/patcher/PatcherPlugin.java#L545
-    // https://github.com/MinecraftForge/ForgeGradle/blob/6639464b29b0923187eee0a609e546ba9f1b998b/src/userdev/java/net/minecraftforge/gradle/userdev/UserDevPlugin.java#L149
-    // create createMcp2Obf task
+
     this.tasks.register('createMcpToObf', clazz)
             .configure { task ->
                 task.setNotch(true)
@@ -47,11 +28,11 @@ ext.doHackyStuff = { final Class<?> clazz ->
             tsrgTask.getDependsOn().forEach({ dep ->
                 srgCopyTask.get().dependsOn(dep)
             })
-            // https://github.com/MinecraftForge/ForgeGradle/blob/6639464b29b0923187eee0a609e546ba9f1b998b/src/mcp/java/net/minecraftforge/gradle/mcp/task/GenerateSRG.java#L39
+      
             srgCopyTask.configure { task ->
                 task.setSrg(tsrgTask.getSrg())
                 task.setMappings(tsrgTask.getMappings())
-                // https://github.com/MinecraftForge/SrgUtils/blob/bb2ca35bb8d349a122ef512dedd24f54f7cd0bdf/src/main/java/net/minecraftforge/srgutils/IMappingFile.java#L44
+               
                 task.setFormat('SRG')
                 task.setNotch(tsrgTask.getNotch())
                 task.setReverse(tsrgTask.getReverse())
@@ -118,45 +99,3 @@ ext.doHackyStuff = { final Class<?> clazz ->
     }
 }
 
-// TODO: In-complete fg 5.0 port. Currently doesn't handle mixin notch srg mapping hack.
-//ext.doHackyStuff = { final Class<?> clazz ->
-//    afterEvaluate {
-//        def createMcp2Srg = this.tasks.getByName('createMcpToSrg')
-//        def createMcpToObf = this.tasks.register('createMcpToObf', clazz)
-//        createMcpToObf.configure { task ->
-//            task.setNotch(true)
-//            task.setReverse(true)
-//            task.getSrg().set(createMcp2Srg.getSrg().get())
-//            task.getMappings().set(createMcp2Srg.getMappings().get())
-//            task.dependsOn(createMcp2Srg)
-//        }
-//        reobf {
-//            jar {
-//                dependsOn(createMcpToObf)
-//                getMappings().set(createMcpToObf.get().getOutput().get())
-//            }
-//        }
-//        this.sourceSets.forEach({ set ->
-//            def compileTask = this.project.tasks[set.compileJavaTaskName]
-//            if (!(compileTask instanceof JavaCompile)) {
-//                println("[BuildDynasty] Non-java compile task for ${set} of type ${compileTask}")
-//                return
-//            }
-//            compileTask.dependsOn(createMcpToObf)
-//            compileTask.doFirst {
-//                def reobfTSrgFile = '-AreobfTsrgFile='
-//                def compilerArgsIterator = compileTask.options.compilerArgs.listIterator()
-//                while (compilerArgsIterator.hasNext()) {
-//                    def compilerArg = compilerArgsIterator.next()
-//                    if (compilerArg.startsWith(reobfTSrgFile)) {
-//                        compilerArgsIterator.remove()
-//                        def toInject = "-AreobfTsrgFile=${createMcpToObf.get().output.get().asFile.canonicalPath}"
-//                        compilerArgsIterator.add(toInject)
-//                        println("[BuildDynasty] Injecting compiler argument: ${toInject}")
-//                    }
-//                }
-//                println("[BuildDynasty] Compiler arguments: ${compileTask.options.compilerArgs}")
-//            }
-//        })
-//    }
-//}
