@@ -9,7 +9,7 @@
 -overloadaggressively
 -dontusemixedcaseclassnames
 
-# instead of renaming to a, b, c, rename to baritone.a, baritone.b, baritone.c so as to not conflict with minecraft's obfd classes
+# instead of renaming to a, b, c, rename to builddynasty.a, builddynasty.b, builddynasty.c so as to not conflict with minecraft's obfd classes
 -flattenpackagehierarchy
 -repackageclasses 'builddynasty'
 
@@ -19,8 +19,8 @@
 -keep class builddynasty.api.** { *; } # this is the keep api
 
 # service provider needs these class names
--keep class builddynasty.BaritoneProvider
--keep class builddynasty.api.IBaritoneProvider
+-keep class builddynasty.BuildDynastyProvider
+-keep class builddynasty.api.IBuildDynastyProvider
 
 -keep class builddynasty.api.utils.MyChunkPos { *; } # even in standalone we need to keep this for gson reflect
 -keepname class builddynasty.api.utils.BlockOptionalMeta # this name is exposed to the user, so we need to keep it in all builds
@@ -29,7 +29,7 @@
 -keep,allowobfuscation @interface builddynasty.KeepName
 -keep @builddynasty.KeepName class *
 -keepclassmembers class * {
-    @baritone.KeepName *;
+    @builddynasty.KeepName *;
 }
 
 # setting names are reflected from field names, so keep field names
