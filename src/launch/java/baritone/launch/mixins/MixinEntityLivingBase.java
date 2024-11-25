@@ -36,7 +36,7 @@ import java.util.Optional;
 import static org.spongepowered.asm.lib.Opcodes.GETFIELD;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/10/2018
  */
 @Mixin(EntityLivingBase.class)
