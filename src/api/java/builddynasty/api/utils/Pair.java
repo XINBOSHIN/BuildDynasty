@@ -20,7 +20,7 @@ package baritone.api.utils;
 import java.util.Objects;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class Pair<A, B> {
 
