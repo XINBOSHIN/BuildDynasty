@@ -36,7 +36,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 public final class GameEventHandler implements IEventBus, Helper {
