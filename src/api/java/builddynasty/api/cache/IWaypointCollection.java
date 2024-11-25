@@ -20,7 +20,7 @@ package baritone.api.cache;
 import java.util.Set;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/24/2018
  */
 public interface IWaypointCollection {
