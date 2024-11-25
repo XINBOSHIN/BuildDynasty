@@ -152,7 +152,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
 //                        compilerArgsIterator.remove()
 //                        def toInject = "-AreobfTsrgFile=${createMcpToObf.get().output.get().asFile.canonicalPath}"
 //                        compilerArgsIterator.add(toInject)
-//                        println("[Baritoe] Injecting compiler argument: ${toInject}")
+//                        println("[BuildDynasty] Injecting compiler argument: ${toInject}")
 //                    }
 //                }
 //                println("[Baritoe] Compiler arguments: ${compileTask.options.compilerArgs}")
