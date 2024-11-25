@@ -87,7 +87,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
                         def argumentFileValue = new File(compilerArg.substring(outTSrgFileArgument.length(), compilerArg.length()))
                         def outNotchSrgFile = withExtension(argumentFileValue, 'notch.srg')
                         def outNotchSrgFileArgument = "-AoutNotchSrgFile=${outNotchSrgFile.canonicalPath}"
-                        println("[Baritoe] Injecting compiler argument: ${outNotchSrgFileArgument}")
+                        println("[BuildDynasty] Injecting compiler argument: ${outNotchSrgFileArgument}")
                         compilerArgsIterator.add(outNotchSrgFileArgument)
                     }
                 }
