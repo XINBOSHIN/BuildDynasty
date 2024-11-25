@@ -12,12 +12,12 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Baritone.  If not, see <https://www.gnu.org/licenses/>.
+ * along with builddynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.launch.mixins;
+package builddynasty.launch.mixins;
 
-import baritone.utils.accessor.IBitArray;
+import builddynasty.utils.accessor.IBitArray;
 import net.minecraft.util.BitArray;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
