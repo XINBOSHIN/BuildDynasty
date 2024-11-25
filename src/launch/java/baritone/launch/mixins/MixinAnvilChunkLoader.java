@@ -15,9 +15,9 @@
  * along with builddynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.launch.mixins;
+package builddynasty.launch.mixins;
 
-import baritone.utils.accessor.IAnvilChunkLoader;
+import builddynasty.utils.accessor.IAnvilChunkLoader;
 import net.minecraft.world.chunk.storage.AnvilChunkLoader;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
