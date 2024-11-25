@@ -18,7 +18,7 @@
 package baritone.api.cache;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/24/2018
  */
 public interface IWorldData {
