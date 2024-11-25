@@ -27,7 +27,7 @@ import net.minecraft.util.EnumFacing;
  * <p>
  * You're recommended to use {@link IArgConsumer}}s to handle these.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/2/2019
  */
 public interface ICommandArgument {
