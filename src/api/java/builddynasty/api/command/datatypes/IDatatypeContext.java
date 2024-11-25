@@ -24,7 +24,7 @@ import baritone.api.command.argument.IArgConsumer;
  * Provides an {@link IDatatype} with contextual information so
  * that it can perform the desired operation on the target level.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @see IDatatype
  * @since 9/26/2019
  */
