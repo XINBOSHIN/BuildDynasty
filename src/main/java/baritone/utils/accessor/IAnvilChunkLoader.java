@@ -22,7 +22,7 @@ import baritone.cache.WorldProvider;
 import java.io.File;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @see WorldProvider
  * @since 8/4/2018
  */
