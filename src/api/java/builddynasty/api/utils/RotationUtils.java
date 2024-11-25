@@ -28,7 +28,7 @@ import net.minecraft.util.math.*;
 import java.util.Optional;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/25/2018
  */
 public final class RotationUtils {
