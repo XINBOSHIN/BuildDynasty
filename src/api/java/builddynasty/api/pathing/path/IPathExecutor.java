@@ -20,7 +20,7 @@ package baritone.api.pathing.path;
 import baritone.api.pathing.calc.IPath;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/8/2018
  */
 public interface IPathExecutor {
