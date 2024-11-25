@@ -20,7 +20,7 @@ package baritone.api.event.events;
 import baritone.api.event.events.type.Cancellable;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/1/2018
  */
 public final class ChatEvent extends Cancellable {
