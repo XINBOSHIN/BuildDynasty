@@ -23,7 +23,7 @@ import baritone.api.utils.BooleanBinaryOperators;
 import net.minecraft.block.state.IBlockState;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public interface Mask {
 
