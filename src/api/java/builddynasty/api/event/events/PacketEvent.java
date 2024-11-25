@@ -22,7 +22,7 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/6/2018
  */
 public final class PacketEvent {
