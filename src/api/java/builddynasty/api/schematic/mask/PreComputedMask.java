@@ -18,7 +18,7 @@
 package baritone.api.schematic.mask;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 final class PreComputedMask extends AbstractMask implements StaticMask {
 
