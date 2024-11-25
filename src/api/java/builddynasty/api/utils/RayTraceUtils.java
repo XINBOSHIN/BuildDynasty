@@ -22,7 +22,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/25/2018
  */
 public final class RayTraceUtils {
