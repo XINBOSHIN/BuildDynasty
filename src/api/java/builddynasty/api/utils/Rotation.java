@@ -18,7 +18,7 @@
 package baritone.api.utils;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/25/2018
  */
 public class Rotation {
