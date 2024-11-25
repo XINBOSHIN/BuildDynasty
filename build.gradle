@@ -82,7 +82,7 @@ minecraft {
     mappings channel: 'stable', version: '39-1.12'
     runs {
         def nativesOutput = extractNatives.output // TODO: fg 5.0 - `def nativesOutput = extractNatives.output.get()`
-        println("[Baritoe] Detected natives: ${nativesOutput}")
+        println("[BuildDynasty] Detected natives: ${nativesOutput}")
         client {
             workingDirectory project.file('run')
             source sourceSets.launch
