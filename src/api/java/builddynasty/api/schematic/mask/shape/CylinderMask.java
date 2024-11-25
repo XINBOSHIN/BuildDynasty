@@ -22,7 +22,7 @@ import baritone.api.schematic.mask.StaticMask;
 import net.minecraft.util.EnumFacing;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class CylinderMask extends AbstractMask implements StaticMask {
 
