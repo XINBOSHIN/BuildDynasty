@@ -22,7 +22,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.RayTraceResult;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/25/2018
  */
 public final class BlockBreakHelper {
