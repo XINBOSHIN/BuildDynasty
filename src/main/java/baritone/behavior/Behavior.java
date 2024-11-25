@@ -24,7 +24,7 @@ import baritone.api.utils.IPlayerContext;
 /**
  * A type of game event listener that is given {@link Baritone} instance context.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/1/2018
  */
 public class Behavior implements IBehavior {
