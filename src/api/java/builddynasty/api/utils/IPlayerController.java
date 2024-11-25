@@ -31,7 +31,7 @@ import net.minecraft.world.GameType;
 import net.minecraft.world.World;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/14/2018
  */
 public interface IPlayerController {
