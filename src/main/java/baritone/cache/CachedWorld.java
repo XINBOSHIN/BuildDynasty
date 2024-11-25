@@ -39,7 +39,7 @@ import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/4/2018
  */
 public final class CachedWorld implements ICachedWorld, Helper {
