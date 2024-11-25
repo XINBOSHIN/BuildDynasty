@@ -39,7 +39,7 @@ import java.util.stream.Stream;
 /**
  * The default, internal implementation of {@link ICommandManager}
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/21/2019
  */
 public class CommandManager implements ICommandManager {
