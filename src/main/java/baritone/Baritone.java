@@ -50,7 +50,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 public class Baritone implements IBaritone {
