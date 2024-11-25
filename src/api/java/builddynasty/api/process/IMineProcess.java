@@ -24,7 +24,7 @@ import net.minecraft.block.Block;
 import java.util.stream.Stream;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/23/2018
  */
 public interface IMineProcess extends IBaritoneProcess {
