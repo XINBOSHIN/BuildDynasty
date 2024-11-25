@@ -18,7 +18,7 @@
 package baritone.api.event.events.type;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/11/2018
  */
 public interface ICancellable {
