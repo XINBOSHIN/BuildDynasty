@@ -25,7 +25,7 @@ import net.minecraft.util.math.ChunkPos;
 import java.util.List;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class BlockChangeEvent {
 
