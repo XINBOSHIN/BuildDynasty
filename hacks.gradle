@@ -155,7 +155,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
 //                        println("[BuildDynasty] Injecting compiler argument: ${toInject}")
 //                    }
 //                }
-//                println("[Baritoe] Compiler arguments: ${compileTask.options.compilerArgs}")
+//                println("[BuildDynasty] Compiler arguments: ${compileTask.options.compilerArgs}")
 //            }
 //        })
 //    }
