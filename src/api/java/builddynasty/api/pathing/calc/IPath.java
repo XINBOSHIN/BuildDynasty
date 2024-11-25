@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * @author leijurv, Brady
+ * @author leijurv, XINBOSHIN
  */
 public interface IPath {
 
