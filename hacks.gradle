@@ -67,7 +67,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
         this.sourceSets.forEach({ set ->
             def compileTask = this.project.tasks[set.compileJavaTaskName]
             if (!(compileTask instanceof JavaCompile)) {
-                println("[Baritoe] Non-java compile task for ${set} of type ${compileTask}")
+                println("[BuildDynasty] Non-java compile task for ${set} of type ${compileTask}")
                 return
             }
             compileTask.dependsOn(createMcp2Obf)
@@ -76,7 +76,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
                 def createMcp2ObfSrgCopy = createMcp2ObfSrgCopyTask.get()
                 def reobfNotchSrgFileArgument = "-AreobfNotchSrgFile=${createMcp2ObfSrgCopy.output.canonicalPath}"
                 compileTask.options.compilerArgs += reobfNotchSrgFileArgument
-                println("[Baritoe] Injecting compiler argument: ${reobfNotchSrgFileArgument}")
+                println("[BuildDynasty] Injecting compiler argument: ${reobfNotchSrgFileArgument}")
 
                 // inject legacy notch srg out file
                 def outTSrgFileArgument = '-AoutTsrgFile='
