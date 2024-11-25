@@ -33,7 +33,7 @@ import java.util.Map;
  * force down certain controls, having the same effect as if we were actually
  * physically forcing down the assigned key.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 public final class InputOverrideHandler extends Behavior implements IInputOverrideHandler {
