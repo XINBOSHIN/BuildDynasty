@@ -41,7 +41,7 @@ import java.util.Collections;
 import java.util.stream.Collectors;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/3/2018
  */
 @Mixin(NetHandlerPlayClient.class)
