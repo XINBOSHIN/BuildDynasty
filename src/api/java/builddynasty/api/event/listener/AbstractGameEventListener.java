@@ -24,7 +24,7 @@ import baritone.api.event.events.*;
  * overridden with empty bodies, allowing inheritors of this class to choose
  * which events they would like to listen in on.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @see IGameEventListener
  * @since 8/1/2018
  */
