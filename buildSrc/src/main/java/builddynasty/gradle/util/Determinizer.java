@@ -50,7 +50,7 @@ public class Determinizer {
                     ByteArrayOutputStream cancer = new ByteArrayOutputStream();
                     copy(jarFile.getInputStream(entry), cancer);
                     String manifest = new String(cancer.toByteArray());
-                    if (!manifest.contains("baritone.launch.BuildDynastyTweaker")) {
+                    if (!manifest.contains("builddynasty.launch.BuildDynastyTweaker")) {
                         throw new IllegalStateException("unable to replace");
                     }
                     manifest = manifest.replace("builddynasty.launch.BaritoneTweaker", "org.spongepowered.asm.launch.MixinTweaker");
