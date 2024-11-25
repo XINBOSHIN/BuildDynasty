@@ -27,7 +27,7 @@ import java.io.File;
 import java.util.List;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 1/15/2019
  */
 public interface IBuilderProcess extends IBaritoneProcess {
