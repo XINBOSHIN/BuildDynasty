@@ -139,7 +139,7 @@ ext.doHackyStuff = { final Class<?> clazz ->
 //        this.sourceSets.forEach({ set ->
 //            def compileTask = this.project.tasks[set.compileJavaTaskName]
 //            if (!(compileTask instanceof JavaCompile)) {
-//                println("[Baritoe] Non-java compile task for ${set} of type ${compileTask}")
+//                println("[BuildDynasty] Non-java compile task for ${set} of type ${compileTask}")
 //                return
 //            }
 //            compileTask.dependsOn(createMcpToObf)
