@@ -18,7 +18,7 @@
 package baritone.api.schematic.mask;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public abstract class AbstractMask implements Mask {
 
