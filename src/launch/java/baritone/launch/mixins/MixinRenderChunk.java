@@ -30,7 +30,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 1/29/2019
  */
 @Mixin(RenderChunk.class)
