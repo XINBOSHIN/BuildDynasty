@@ -18,7 +18,7 @@
 package baritone.api.event.events.type;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/2/2018
  */
 public enum EventState {
