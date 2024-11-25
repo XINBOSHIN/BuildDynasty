@@ -36,7 +36,7 @@ import java.util.function.Function;
 /**
  * A cached list of the best tools on the hotbar for any block
  *
- * @author Avery, Brady, leijurv
+ * @author Avery, XINBOSHIN, leijurv
  */
 public class ToolSet {
 
