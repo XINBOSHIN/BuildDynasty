@@ -22,7 +22,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/21/2018
  */
 public final class RotationMoveEvent {
