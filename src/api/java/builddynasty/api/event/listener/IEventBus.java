@@ -22,7 +22,7 @@ package baritone.api.event.listener;
  * registered so that they receive the events that are dispatched to this
  * listener.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 11/14/2018
  */
 public interface IEventBus extends IGameEventListener {
