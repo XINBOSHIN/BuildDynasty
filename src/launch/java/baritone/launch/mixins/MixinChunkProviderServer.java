@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/4/2018
  */
 @Mixin(ChunkProviderServer.class)

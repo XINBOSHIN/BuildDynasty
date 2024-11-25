@@ -28,7 +28,7 @@ import org.spongepowered.tools.obfuscation.mcp.ObfuscationServiceMCP;
 import java.util.List;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 7/31/2018
  */
 public class BuildDynastyTweaker extends SimpleTweaker {
