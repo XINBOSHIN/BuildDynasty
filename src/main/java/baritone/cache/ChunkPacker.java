@@ -31,7 +31,7 @@ import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import java.util.*;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/3/2018
  */
 public final class ChunkPacker {
