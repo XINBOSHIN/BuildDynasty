@@ -32,7 +32,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 8/3/2018
  */
 public final class CachedRegion implements ICachedRegion {
