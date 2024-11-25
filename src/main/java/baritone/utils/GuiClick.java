@@ -47,7 +47,7 @@ import static org.lwjgl.opengl.GL11.*;
 
 public class GuiClick extends GuiScreen {
 
-    // My name is Brady and I grant leijurv permission to use this pasted code
+    // My name is XINBOSHIN and I grant leijurv permission to use this pasted code
     private final FloatBuffer MODELVIEW = BufferUtils.createFloatBuffer(16);
     private final FloatBuffer PROJECTION = BufferUtils.createFloatBuffer(16);
     private final IntBuffer VIEWPORT = BufferUtils.createIntBuffer(16);
