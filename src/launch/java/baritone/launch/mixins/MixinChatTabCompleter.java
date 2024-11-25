@@ -15,7 +15,7 @@
  * along with builddynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.launch.mixins;
+package builddynasty.launch.mixins;
 
 import net.minecraft.client.gui.GuiChat;
 import org.spongepowered.asm.mixin.Mixin;
