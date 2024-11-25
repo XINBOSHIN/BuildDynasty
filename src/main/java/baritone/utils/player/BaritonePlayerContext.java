@@ -30,7 +30,7 @@ import net.minecraft.world.World;
 /**
  * Implementation of {@link IPlayerContext} that provides information about the primary player.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 11/12/2018
  */
 public final class BaritonePlayerContext implements IPlayerContext {
