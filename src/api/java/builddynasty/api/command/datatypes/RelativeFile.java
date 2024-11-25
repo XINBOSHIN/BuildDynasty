@@ -76,7 +76,7 @@ public enum RelativeFile implements IDatatypePost<File, File> {
         // I will not make the caller deal with this, seriously
         // Tab complete code is beautiful and I'm not going to bloat it with dumb ass checked exception bullshit -LoganDark
 
-        // lol owned -Brady
+        // lol owned -XINBOSHIN
 
         File base = getCanonicalFileUnchecked(base0);
         String currentPathStringThing = consumer.getString();
