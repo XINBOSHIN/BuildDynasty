@@ -23,7 +23,7 @@ import baritone.api.schematic.mask.StaticMask;
 import net.minecraft.block.state.IBlockState;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  */
 public final class NotMask extends AbstractMask {
 
