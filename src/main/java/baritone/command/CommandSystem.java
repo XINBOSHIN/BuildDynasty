@@ -22,7 +22,7 @@ import baritone.api.command.argparser.IArgParserManager;
 import baritone.command.argparser.ArgParserManager;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/4/2019
  */
 public enum CommandSystem implements ICommandSystem {
