@@ -15,7 +15,7 @@
  * along with builddynasty.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package baritone.launch;
+package builddynasty.launch;
 
 import io.github.impactdevelopment.simpletweaker.SimpleTweaker;
 import net.minecraft.launchwrapper.Launch;
