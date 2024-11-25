@@ -1,6 +1,6 @@
 
 
-package baritone.gradle.task;
+package builddynasty.gradle.task;
 
 import org.gradle.api.tasks.TaskAction;
 

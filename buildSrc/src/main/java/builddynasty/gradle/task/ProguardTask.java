@@ -1,7 +1,7 @@
 
 package builddynasty.gradle.task;
 
-import baritone.gradle.util.Determinizer;
+import builddynasty.gradle.util.Determinizer;
 import org.apache.commons.io.IOUtils;
 import org.gradle.api.Project;
 import org.gradle.api.artifacts.Configuration;
