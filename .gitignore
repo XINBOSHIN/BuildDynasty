@@ -1,25 +1,36 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+.DS_Store
+**/*.swp
 
-# idea
-out
+run/
+autotest/
+dist/
+
+# Gradle
+build/
+.gradle/
+classes/
+*.class
+
+# IntelliJ Files
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
+/logs/
 
-# gradle
-build
-.gradle
+# Eclipse Files
+.classpath
+.project
+.settings/
+baritone_Client.launch
 
-# other
-eclipse
-run
+# Copyright Files
+!/.idea/copyright/Baritone.xml
+!/.idea/copyright/profiles_settings.xml
 
-# Files from Forge MDK
-forge*changelog.txt
+.vscode/launch.json
+
+libs/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
+libs/java-objc-bridge-1.1.jar
+
+mapping
