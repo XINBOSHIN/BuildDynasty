@@ -26,7 +26,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/13/2018
  */
 public final class VecUtils {
