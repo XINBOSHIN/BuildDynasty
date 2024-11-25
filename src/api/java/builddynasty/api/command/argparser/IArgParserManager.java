@@ -26,7 +26,7 @@ import baritone.api.command.registry.Registry;
  * It can be assumed that a {@link IArgParser} exists for {@link Integer}, {@link Long},
  * {@link Float}, {@link Double} and {@link Boolean}.
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 10/4/2019
  */
 public interface IArgParserManager {
