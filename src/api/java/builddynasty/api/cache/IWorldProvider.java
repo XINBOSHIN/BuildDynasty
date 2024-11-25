@@ -20,7 +20,7 @@ package baritone.api.cache;
 import java.util.function.Consumer;
 
 /**
- * @author Brady
+ * @author XINBOSHIN
  * @since 9/24/2018
  */
 public interface IWorldProvider {
