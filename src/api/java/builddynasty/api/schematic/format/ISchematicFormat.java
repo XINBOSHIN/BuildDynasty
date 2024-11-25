@@ -27,7 +27,7 @@ import java.io.InputStream;
 /**
  * The base of a {@link ISchematic} file format
  *
- * @author Brady
+ * @author XINBOSHIN
  * @since 12/23/2019
  */
 public interface ISchematicFormat {
